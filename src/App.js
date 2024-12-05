@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ForecastForm from "./components/ForecastForm";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ fontFamily: "Arial, sans-serif", padding: "20px" }}>
+      <h1 style={{ textAlign: "center", color: "#333" }}>
+        Reservoir Live Storage Forecast
+      </h1>
+      <p style={{ textAlign: "center", color: "#555" }}>
+        Enter the year and reservoir name to get live storage predictions.
+      </p>
+      <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+        <ForecastForm />
+      </div>
     </div>
   );
 }
